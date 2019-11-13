@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<br><br>
+<table width="400"  align=center>
+    <tr>
+        <td>
+
+        	<form method='POST' >
+        		<div class="form-row">
+			{% csrf_token%}
+			{{form.as_p}}
+			<br>
+				</div>
+
+			<div >
+				<div class="col_md_8 col-md-offset-2">
+					<div class="form-group">
+						<button class= "btn btn-primary center-block" type="submit" style="">Guardar</button>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</form>
+
+<br>
+<div>
+		<div class="form-group">
+			<a href="{% url 'app1:detalleventa' %}"><strong><u><font size ="5", color="#2271b3">Detalle de la factura</u></strong></a>
+		</div>
+			
+</div>
+
+        </td>
+    </tr>
+</table>
+		
+
+{% endblock %}
+

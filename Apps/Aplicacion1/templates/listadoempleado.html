@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<center><h2>Listado de empleados</h2>  </center> 
+<br>
+<table border="1" class="table table-striped">
+	<tr>
+		<td class="danger"><font size ="3", color="black"><strong>Codigo empleado</strong></td>
+		<td class="danger"><font size ="3", color="black"> <strong>Nombre empleado</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>E-mail</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Fecha de inicio</strong></td>
+		<td class= "danger"><font size ="3", color="black"><strong>Acciones</strong></td>
+		
+	</tr>
+	{% for  est in object_list %}
+	<tr>
+		<td > {{ est.codigo_empleado}}</td>
+		<td > {{ est.nombre_empleado}}</td>
+		<td > {{ est.email_empleado}}</td>
+		<td > {{ est.fecha_empleado}}</td>
+			<td>
+			<a class="btn btn-primary" href="{% url 'app1:editar_empleado' est.codigo_empleado %}">Editar</a>
+			<a class="btn btn-primary" href="{% url 'app1:eliminar_empleado' est.codigo_empleado %}">Eliminar</a>
+			
+		</td>
+
+
+	</tr>
+	
+	
+	{% endfor %}
+	<br>
+	<div>
+		<div class="form-group">
+			<center> 
+			<a href="{% url 'app1:empleado' %}"><strong><u><font size ="5", color="#2271b3">Crear un nuevo empleado</font></u></strong></a>
+			</center>
+		</div>
+			
+	</div>
+</table>
+
+
+{% endblock %}

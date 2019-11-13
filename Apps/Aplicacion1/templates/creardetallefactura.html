@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<table width="450"  align=center>
+    <tr>
+        <td>
+			<form method='POST'>
+					<div class="form-row">
+
+				{% csrf_token%}
+				{{form.as_p}}
+					</div>
+
+				<div id="precioR"></div>
+				<input type="submit" name="exit">
+				
+			</form>
+			<br>
+			<a href="{% url 'app1:listadodetallefactura' %}"><strong><u><font size ="5", color="#2271b3">Listado de facturas</font></u></strong></a>
+			
+		<td>	
+	</tr>
+
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+
+#boton
+{
+	color: white;
+	border-radius: 7px;
+	width: 21%;
+	height: 41px;
+	font-size: 25px;
+	background: dodgerblue;
+}
+#login
+{
+	width: 30%;
+	margin: 0px auto;
+}
+
+#usuario
+{
+	margin: auto 20px; 
+}
+#pass
+{
+	margin: auto 10px;
+}
+#carnet
+{
+	margin: auto 30px;
+}
+#btnVerifica
+{
+	color: blue;
+	border-radius: 5px;
+	width: 13%;
+	height: 31px;
+	font-size: 20px;
+	background-color: #777799; ;
+}
+
+
+
+
+
+
+
+
+

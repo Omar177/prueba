@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<br><br>
+<table width="400"  align=center>
+    <tr>
+        <td>
+
+        	<form method='POST' >
+
+        		
+			{% csrf_token%}
+			{{form.as_p}}
+				
+	
+			<br>
+			<div >
+				<div class="col_md_8 col-md-offset-2">
+					<div class="form-group">
+						<button class= "btn btn-primary"input type="submit">Guardar</button>
+					</div>
+					
+				</div>
+				
+			</div>
+		</form>
+
+	
+<br>
+	
+
+
+        </td>
+    </tr>
+    </table>
+		
+{% endblock %}
+

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<center> 
+<h2>Listado de productos</h2>
+</center>
+<br>
+<table border="1" class="table table-striped">
+	<tr>
+		<td class="danger"><font size ="3", color="black"><strong>Codigo inventario</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Nombre producto</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Marca</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Existencia</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Precio</strong></td>
+		<td class= "danger"><font size ="3", color="black"><strong>Acciones</strong></td>
+	</tr>
+	{% for  inventario in object_list %}
+	<tr>
+		<td> {{ inventario.codigo_inventario}}</td>
+		<td> {{ inventario.nombre_inventario}}</td>
+		<td> {{ inventario.marca_invetario}}</td>
+		<td> {{ inventario.existencia_inventario}}</td>
+		<td> {{ inventario.precio_inventario }}</td>
+		<td>
+			<a class="btn btn-primary" href="{% url 'app1:editar_inventario' inventario.codigo_inventario %}">Editar</a>
+			<a class="btn btn-primary" href="{% url 'app1:eliminar_inv' inventario.codigo_inventario %}">Eliminar</a>
+		</td>
+
+	</tr>
+	{% endfor %}
+	<div>
+				<div class="form-group">
+				
+			<center>   	<a href="{% url 'app1:inventario' %}"><strong><u><font size ="5", color="#2271b3">Ingresar nuevo producto</font></u></strong></a>
+			</center>	
+			
+				</div>
+					
+		</div>
+</table>
+
+
+{% endblock %}

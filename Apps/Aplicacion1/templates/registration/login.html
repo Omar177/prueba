@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<form method="POST">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-gropu">
+        <label for="username">Nombre de usuario:</label>
+        <input type="text" name="username" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-gropu">
+        <label for="username" color="#2271b3" >Password:</label>
+        <input type="Password" name="Password" class="form-control">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="form-gropu">
+        <input class="btn btn-primary" type="submit" value="Ingresar">
+      </div>
+    </div>
+  </div>
+
+</form>
+{% endblock %}

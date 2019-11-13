@@ -1,0 +1,13 @@
+{% if inventarios > 0 %}
+
+{% for inven in inventarios %}
+
+	<input type="text">{{inven.precio_inventario}}</input>
+
+{% end for %}
+
+{% else %}
+
+<a href="#">Nada</a>
+
+{% end if %}

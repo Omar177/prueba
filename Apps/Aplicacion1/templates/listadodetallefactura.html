@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<br><br>
+<h2><center>listado de facturas</center></h2>
+<br>
+<table border="1" class="table table-striped" >
+	<tr>
+		<td class="danger"><font size ="3", color="black"><strong>Codigo de factura</strong></td>
+		<td class="danger"><font size ="3", color="black"> <strong>Nombre de venta</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Codigo de producto</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Cantidad de producto</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Precio unitario</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Precio total</strong></td>
+		<td class="danger"><font size ="3", color="black"><strong>Fecha factura</strong></td>
+
+		
+	</tr>
+	{% for  est in object_list %}
+	<tr>
+		<td > {{ est.codigo_detalle}}</td>
+		<td > {{ est.codigo_venta}}</td>
+		<td > {{ est.codigo_inventario}}</td>
+		<td > {{ est.cantidad_producto}}</td>
+		<td > {{ est.Precio_unitario}}</td>
+		<td > {{ est.precio_total}}</td>
+		<td > {{ est.fecha_detalle}}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+
+{% endblock %}
